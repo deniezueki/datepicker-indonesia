@@ -1,0 +1,38 @@
+  //membutuhkan jquery.js dan bootstrap datepicker 
+  $(document).ready(function () {
+            $.fn.datepicker.dates['id'] = {
+                days: ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"],
+                daysShort: ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"],
+                daysMin: ["Mg", "Sn", "Sl", "Rb", "Km", "Jm", "Sb"],
+                months: ["Januari", "Februari", "Maret", "April", "Mai", "Juni", "Juli", "Augustus",
+                    "September", "Oktober", "November", "December"
+                ],
+                monthsShort: ["Jan", "Feb", "Mar", "Apr", "Mai", "Jun", "Jul", "Ags", "Sep", "Okt",
+                    "Nov", "Dec"
+                ],
+                today: "Hari Ini",
+                clear: "Clear",
+                format: "mm/dd/yyyy",
+                titleFormat: "MM yyyy",
+                weekStart: 0
+            };
+            
+            //contoh penggunaan
+            $('.input-tanggal').datepicker({
+                language: 'id',
+                calendarWeeks: true,
+                todayBtn: 'linked',
+                format: 'yyyy-mm-dd',
+                assumeNearbyYear: true,
+                startDate: '-1d',
+                language: 'id',
+                locale: 'id',
+                endDate: '1',
+                todayHighlight: true,
+                autoclose: true,
+
+            });
+        });
+
+
+    });
